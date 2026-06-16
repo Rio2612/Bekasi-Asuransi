@@ -100,7 +100,7 @@ const products: Product[] = [
     tagline:     'Gedung & Hunian',
     description:
       'Perlindungan menyeluruh untuk gedung, pabrik, kantor, dan hunian dari risiko kebakaran, bencana alam, dan pencurian.',
-    href:        '/produk/properti',
+    href:        '/properti',
     icon:        <IconProperty />,
     iconBg:      '#EEF3FF',
     iconColor:   '#1B3A70',
@@ -111,7 +111,7 @@ const products: Product[] = [
     tagline:     'Tanggung Gugat',
     description:
       'Proteksi hukum dan finansial saat bisnis Anda menghadapi klaim pihak ketiga akibat kegiatan operasional.',
-    href:        '/produk/liability',
+    href:        '/liability',
     icon:        <IconLiability />,
     iconBg:      '#FFF8E6',
     iconColor:   '#C8880A',
@@ -122,7 +122,7 @@ const products: Product[] = [
     tagline:     'Proyek Konstruksi',
     description:
       'Menjamin proyek konstruksi, pemasangan alat berat, hingga mesin dari risiko kerusakan selama pengerjaan.',
-    href:        '/produk/engineering',
+    href:        '/engineering',
     icon:        <IconEngineering />,
     iconBg:      '#F0FAF4',
     iconColor:   '#0D7A45',
@@ -133,7 +133,7 @@ const products: Product[] = [
     tagline:     'Pengiriman Barang',
     description:
       'Melindungi barang kiriman melalui jalur darat, laut, maupun udara dari risiko kerusakan dan kehilangan.',
-    href:        '/produk/cargo',
+    href:        '/cargo',
     icon:        <IconCargo />,
     iconBg:      '#FFF2EE',
     iconColor:   '#C0401A',
@@ -144,7 +144,7 @@ const products: Product[] = [
     tagline:     'Jaminan Proyek',
     description:
       'Memberikan jaminan kepada pemilik proyek bahwa kontraktor akan memenuhi kewajiban kontraktualnya.',
-    href:        '/produk/surety-bond',
+    href:        '/surety-bond',
     icon:        <IconSurety />,
     iconBg:      '#F5F0FF',
     iconColor:   '#6D28D9',
@@ -155,7 +155,7 @@ const products: Product[] = [
     tagline:     'Mobil & Kendaraan',
     description:
       'Proteksi kendaraan pribadi maupun armada bisnis dari risiko kecelakaan, pencurian, dan kerusakan.',
-    href:        '/produk/kendaraan',
+    href:        '/kendaraan',
     icon:        <IconKendaraan />,
     iconBg:      '#EEF9FF',
     iconColor:   '#0369A1',
@@ -166,7 +166,7 @@ const products: Product[] = [
     tagline:     'Machinery Breakdown',
     description:
       'Menjamin mesin produksi dan peralatan industri dari kerusakan mendadak akibat kegagalan mekanik atau listrik.',
-    href:        '/produk/machinery',
+    href:        '/machinery',
     icon:        <IconMachinery />,
     iconBg:      '#FFF4F0',
     iconColor:   '#B45309',
@@ -177,7 +177,7 @@ const products: Product[] = [
     tagline:     'Kecelakaan Diri',
     description:
       'Santunan finansial bagi Anda dan karyawan atas risiko kecelakaan yang mengakibatkan cedera atau kematian.',
-    href:        '/produk/personal-accident',
+    href:        '/personal-accident',
     icon:        <IconPersonalAccident />,
     iconBg:      '#FFF0F5',
     iconColor:   '#BE185D',
