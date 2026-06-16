@@ -4,40 +4,77 @@
 
 @layer base {
   :root {
-    --navy:        #0D2145;
-    --navy-light:  #1B3A70;
-    --navy-dark:   #07152D;
-    --gold:        #C8880A;
-    --gold-light:  #F0B429;
-    --cream:       #F5F8FC;
-    --slate:       #5A6E8A;
-    --border:      #E2E8F2;
+    --radius: 0.5rem;
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 217.2 91.2% 59.8%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 217.2 91.2% 59.8%;
   }
 
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 217.2 91.2% 59.8%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 224.3 76.3% 48%;
+  }
+}
+
+@layer base {
   html {
     scroll-behavior: smooth;
   }
-
-  body {
-    font-family: var(--font-jakarta), sans-serif;
-    background-color: var(--cream);
-    color: var(--navy);
-    -webkit-font-smoothing: antialiased;
-  }
-
   * {
+    @apply border-border;
     box-sizing: border-box;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
   }
 }
 
 @layer components {
-  /* Card hover: gold sweep dari bawah — SIGNATURE element */
+  /* 
+    Card Link Komponen Baru (Gaya Dunia Asuransi):
+    Bersih, Menggunakan sistem warna HSL variabel, dan bebas dari error shadow-navy
+  */
   .product-card {
-    @apply relative bg-white rounded-2xl p-6 border border-border
+    @apply relative bg-card rounded-2xl p-6 border border-border
            transition-all duration-300 ease-out
-           hover:-translate-y-1 hover:shadow-xl hover:shadow-navy/10
+           hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/10
            overflow-hidden cursor-pointer;
   }
+  
+  /* Efek garis dekoratif bawah menggunakan warna primary baru */
   .product-card::after {
     content: '';
     position: absolute;
@@ -45,7 +82,7 @@
     left: 0;
     right: 0;
     height: 3px;
-    background: linear-gradient(90deg, var(--gold), var(--gold-light));
+    background: hsl(var(--primary));
     transform: scaleX(0);
     transform-origin: left;
     transition: transform 0.35s ease-out;
@@ -61,17 +98,18 @@
     transition: transform 0.3s ease-out;
   }
 
-  /* Buttons */
+  /* Penyesuaian Tombol ke Skema Warna Baru */
   .btn-gold {
-    @apply inline-flex items-center gap-2.5 bg-gold hover:bg-gold-dark
-           text-white font-semibold px-7 py-3.5 rounded-xl
-           transition-all duration-200 hover:shadow-lg hover:shadow-gold/30
+    @apply inline-flex items-center gap-2.5 bg-primary hover:opacity-90
+           text-primary-foreground font-semibold px-7 py-3.5 rounded-xl
+           transition-all duration-200 hover:shadow-lg hover:shadow-primary/30
            hover:-translate-y-0.5 select-none;
   }
+  
   .btn-outline-white {
-    @apply inline-flex items-center gap-2 border-2 border-white/30
-           text-white font-semibold px-7 py-3.5 rounded-xl
-           transition-all duration-200 hover:bg-white/10 hover:border-white/60;
+    @apply inline-flex items-center gap-2 border-2 border-foreground/30
+           text-foreground font-semibold px-7 py-3.5 rounded-xl
+           transition-all duration-200 hover:bg-foreground/5;
   }
 
   /* Section wrapper */
