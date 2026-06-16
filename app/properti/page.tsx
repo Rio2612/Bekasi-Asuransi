@@ -13,7 +13,7 @@ const baseUrl = 'https://www.duniaasuransi.com';
 
 // ─── METADATA (SEO) ───────────────────────────────────────────────────────────
 export const metadata: Metadata = {
-  title: 'Dunia Asuransi — Konsultan Asuransi Kerugian Korporat Indonesia | Rio Mardiansyah',
+  title: 'Dunia Asuransi — Konsultan Asuransi Kerugian Korporat Indonesia | Rio Mds',
   description:
     'Dunia Asuransi adalah portal konsultasi asuransi kerugian korporat di Indonesia. Spesialis Marine Cargo, Property All Risk, Surety Bond, Asuransi Liability, dan Engineering Insurance. Dipimpin Rio Mardiansyah.',
   keywords: [
