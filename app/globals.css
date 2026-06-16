@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --navy:        #0D2145;
+    --navy-light:  #1B3A70;
+    --navy-dark:   #07152D;
+    --gold:        #C8880A;
+    --gold-light:  #F0B429;
+    --cream:       #F5F8FC;
+    --slate:       #5A6E8A;
+    --border:      #E2E8F2;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-jakarta), sans-serif;
+    background-color: var(--cream);
+    color: var(--navy);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+}
+
+@layer components {
+  /* Card hover: gold sweep dari bawah — SIGNATURE element */
+  .product-card {
+    @apply relative bg-white rounded-2xl p-6 border border-border
+           transition-all duration-300 ease-out
+           hover:-translate-y-1 hover:shadow-xl hover:shadow-navy/10
+           overflow-hidden cursor-pointer;
+  }
+  .product-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--gold), var(--gold-light));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.35s ease-out;
+    border-radius: 0 0 1rem 1rem;
+  }
+  .product-card:hover::after {
+    transform: scaleX(1);
+  }
+  .product-card:hover .card-icon {
+    transform: translateY(-4px);
+  }
+  .card-icon {
+    transition: transform 0.3s ease-out;
+  }
+
+  /* Buttons */
+  .btn-gold {
+    @apply inline-flex items-center gap-2.5 bg-gold hover:bg-gold-dark
+           text-white font-semibold px-7 py-3.5 rounded-xl
+           transition-all duration-200 hover:shadow-lg hover:shadow-gold/30
+           hover:-translate-y-0.5 select-none;
+  }
+  .btn-outline-white {
+    @apply inline-flex items-center gap-2 border-2 border-white/30
+           text-white font-semibold px-7 py-3.5 rounded-xl
+           transition-all duration-200 hover:bg-white/10 hover:border-white/60;
+  }
+
+  /* Section wrapper */
+  .section-wrap {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+}
