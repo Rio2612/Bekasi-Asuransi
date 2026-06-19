@@ -7,13 +7,13 @@ export const metadata: Metadata = {
   description:
     "Layanan asuransi properti komprehensif di Bekasi, Cikarang, dan Cibitung. Amankan aset pabrik, gudang logistik, PAR, serta hunian Anda bersama Rio MDS.",
   alternates: {
-    canonical: "https://duniaasuransi.com/properti",
+    canonical: "https://asuransibekasi.biz.id/properti",
   },
   openGraph: {
     title: "Asuransi Properti Bekasi | Proteksi Pabrik, Gudang & Rumah Terpercaya",
     description:
       "Layanan asuransi properti komprehensif di Bekasi, Cikarang, dan Cibitung. Amankan aset pabrik, gudang logistik, PAR, serta hunian Anda bersama Rio MDS.",
-    url: "https://duniaasuransi.com/properti",
+    url: "https://asuransibekasi.biz.id/properti",
     type: "website",
   },
 };
@@ -38,8 +38,8 @@ const jsonLd = {
   breadcrumb: {
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Beranda", item: "https://duniaasuransi.com" },
-      { "@type": "ListItem", position: 2, name: "Asuransi Properti", item: "https://duniaasuransi.com/properti" },
+      { "@type": "ListItem", position: 1, name: "Beranda", item: "https://asuransibekasi.biz.id" },
+      { "@type": "ListItem", position: 2, name: "Asuransi Properti", item: "https://asuransibekasi.biz.id/properti" },
     ],
   },
 };
@@ -323,7 +323,7 @@ export default function AsuransiPropertiPage() {
                   +62 813-1556-592 (WhatsApp)
                 </a>
                 <a
-                  href="mailto:rio@duniaasuransi.com"
+                  href="mailto:rio@asuransibekasi.biz.id"
                   className="inline-flex items-center gap-3 font-semibold text-sm text-foreground hover:text-primary transition-colors group"
                 >
                   <span className="w-9 h-9 rounded-xl flex items-center justify-center bg-primary text-primary-foreground shadow-sm shadow-primary/20 group-hover:scale-105 transition-transform">
@@ -331,7 +331,7 @@ export default function AsuransiPropertiPage() {
                       <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                     </svg>
                   </span>
-                  rio@duniaasuransi.com
+                  rio@asuransibekasi.biz.id
                 </a>
               </div>
             </div>
